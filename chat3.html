@@ -1,0 +1,101 @@
+<!--index 첫페이지
+    1) 단축키 !누르고 엔터-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--link:css시 자동으로 추가-->
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat with Abdul Ali - SquidGame</title>
+  </head>
+  <body class="chat-screen">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>SKT</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fa-solid fa-battery-full"></i>
+      </div>
+    </div>
+
+    <header>
+      <div class="alt-screen-header main-screen">
+        <div class="alt-header__column">
+          <a href="chats.html">
+            <i class="fa-solid fa-chevron-left"></i>
+          </a>
+        </div>
+        <div class="alt-header__column">
+          <h1 class="alt-screen-header__text chat_name">Abdul Ali</h1>
+        </div>
+        <div class="alt-header__column">
+          <span class="chat-magnify"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+          <span><i class="fa-solid fa-bars"></i></span>
+        </div>
+      </div>
+    </header>
+
+    <!--main은 그냥 padding사이즈를 한번에 맞춰주려고 쓴거임-->
+    <!--main-screen안에 padding이 있기때문에 그대로 쓴다-->
+    <main class="main-chat">
+      <div class="chat__timestamp">Tuesday, June 30,2020</div>
+      <div class="message-row">
+        <img
+          src="data:image/jpeg;base64,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"
+        />
+        <div class="message-row__content">
+          <span class="message__author">Abdul Ali</span>
+          <div class="message__info">
+            <div class="message__bubble-box">
+              <span class="message__bubble first-message">기..훈이형</span>
+              <span class="message__bubble second-message"
+                ><img
+                  class="img-message"
+                  src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fk.kakaocdn.net%2Fdn%2FFbdlJ%2Fbtrhh7b5N3x%2FX8lihvlj8Q8slvUFWaYMBk%2Fimg.jpg"
+              /></span>
+            </div>
+            <span class="message__time second-message">18:30</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row meassage-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">No comment.</span>
+            <span class="message__time">21:27</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="reply">
+      <div class="reply__column">
+        <i class="fa-regular fa-square-plus fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" placeholder="Write a message..." />
+        <i class="fa-regular fa-face-smile fa-lg"></i>
+        <button>
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </form>
+
+    <div id="no-mobile">
+      <span>Your screen is too big</span>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/a5602e2e31.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

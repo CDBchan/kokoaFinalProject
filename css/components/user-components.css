@@ -1,0 +1,77 @@
+/*반복되는것들은 component로*/
+.user-component {
+  justify-content: space-between; /*이건 2>을 오른쪽으로 옮기기 위해 */
+  color: beige;
+}
+
+.user-component, /*user-component는 2개의 column을 가진 부모*/
+.user-component__column:first-child {
+  /*여기서 사진과 이름이 옆으로 올수있게 flex설정*/
+  display: flex;
+  align-items: center; /*이렇게해야 사진과 이름이 중앙 정렬*/
+}
+
+.user-component__avatar {
+  width: 70px;
+  height: 70px;
+  border-radius: 30px;
+  margin-right: 10px;
+}
+
+.user-component__avatar--xl {
+  width: 80px;
+  height: 80px;
+}
+
+.user-component__avatar--sm {
+  width: 60px;
+  height: 60px;
+  border-radius: 25px;
+}
+
+.user-component__title {
+  font-weight: 800;
+  font-size: 22px;
+}
+.user-component__title-sm {
+  font-weight: 800;
+  font-size: 18px;
+}
+
+.user-component__title-not-bold {
+  font-weight: 500;
+}
+
+.user-component__subtitle {
+  margin-top: 8px;
+  color: var(--main-border);
+}
+
+.user-component__column:last-child {
+  /*-> badge*/
+  color: beige;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.user-component__time {
+  margin-bottom: 10px;
+  display: block;
+}
+
+.user-component__column img {
+  border: 2px solid var(--main-border);
+}
+
+.chats {
+  margin-bottom: 20px;
+}
+
+.user-component-find {
+  margin-top: 20px;
+}
+
+.user-component__column__find i {
+  opacity: 0.7;
+}

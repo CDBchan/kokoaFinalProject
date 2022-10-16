@@ -1,0 +1,133 @@
+<!--index 첫페이지
+    1) 단축키 !누르고 엔터-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--link:css시 자동으로 추가-->
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Settings - SquidGame</title>
+  </head>
+  <body>
+    <!-- 1) 02.png의 상태바에 열이 3개-->
+    <div class="status-bar">
+      <!-- class 이름을 그냥 column으로 짓기보다 status-bar__column
+        이렇게 짓는게 훨씬 보기 좋다. BEM규칙 -->
+      <div class="status-bar__column">
+        <span>SKT</span>
+        <!--아이콘 추가하는법 
+            1)아이콘 이미지를 가져옴
+            2) SVG이미지 사용 -->
+        <!--To Do: wifi Icon-->
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <!--Battery Icon-->
+        <i class="fa-solid fa-battery-full"></i>
+        <!--Lighting Icon-->
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header>
+      <div class="alt-screen-header main-screen">
+        <div>
+          <a href="more.html"><i class="fa-solid fa-chevron-left fa-2x"></i></a>
+        </div>
+        <div>
+          <h1 class="alt-screen-header__text chat_name">Settings</h1>
+        </div>
+        <div>
+          <span class="chat-magnify"
+            ><i class="fa-solid fa-magnifying-glass fa-2x"></i
+          ></span>
+        </div>
+      </div>
+    </header>
+
+    <!--main은 그냥 padding사이즈를 한번에 맞춰주려고 쓴거임-->
+    <!--main-screen안에 padding이 있기때문에 그대로 쓴다-->
+    <main class="main-screen">
+      <ul class="settings-list">
+        <li class="settings-setting">
+          <div class="settings-setting-column">
+            <i class="fa-solid fa-bullhorn"></i>
+            <span> Notices</span>
+          </div>
+          <div class="settings-setting-column"></div>
+        </li>
+
+        <li class="settings-setting">
+          <div class="settings-setting-column">
+            <i class="fa-solid fa-flask"></i>
+            <span>SquidGame Lab</span>
+          </div>
+          <div class="settings-setting-column"></div>
+        </li>
+        <li class="settings-setting">
+          <div class="settings-setting-column">
+            <i class="fa-solid fa-door-open"></i>
+            <span>GiveUp</span>
+          </div>
+          <div class="settings-setting-column"></div>
+        </li>
+        <li class="settings-setting">
+          <div class="settings-setting-column">
+            <i class="fa-solid fa-circle-info"></i>
+            <span>Version</span>
+          </div>
+          <div class="settings-setting-column">Latest Version</div>
+        </li>
+      </ul>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <!--fa-lg는 아이콘을 크게하기위해 
+          link의 기본 색상은 파란색-->
+          <a class="nav__link" href="friends.html">
+            <i class="fa-regular fa-user fa-2x"></i>
+          </a>
+        </li>
+
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification badge">2</span>
+            <i class="fa-regular fa-comment fa-2x"></i>
+          </a>
+        </li>
+
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fa-solid fa-magnifying-glass fa-2x"></i>
+          </a>
+        </li>
+
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <span class="nav__dot"></span>
+            <i class="fa-solid fa-ellipsis fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="no-mobile">
+      <img
+        src="https://photo.coolenjoy.co.kr/data/editor/2111/45a3515baf1566ae83cf16567b3f1476e551954f.jpg"
+      />
+      <div id="text">The Screen is too big</div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/a5602e2e31.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

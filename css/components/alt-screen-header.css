@@ -1,0 +1,35 @@
+.alt-screen-header {
+  color: beige;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box; /*이걸로 box사이즈 조절 가능 */
+  margin-top: 40px;
+}
+
+.alt-screen-header__text {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.alt-header__column i {
+  font-size: 20px;
+}
+
+.alt-header__column span:first-child {
+  margin-right: 20px;
+}
+
+.alt-header__column {
+  width: 33%;
+}
+
+.alt-header__column:last-child {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.alt-header__column:nth-child(2) {
+  text-align: center;
+}

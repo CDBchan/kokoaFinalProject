@@ -1,0 +1,257 @@
+.chat-screen {
+  height: 80vh;
+}
+
+.chat-screen .alt-screen-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  position: fixed; /*position fixed할때 width줘야한다*/
+  box-sizing: border-box; /*이걸로 box사이즈 조절 가능 */
+  background: transparent;
+  height: 50px;
+  top: 20px;
+  z-index: 1;
+  margin-top: 10px;
+}
+
+.chat-screen .status-bar {
+  z-index: 2;
+}
+
+.chat-screen .status-bar {
+  background: transparent;
+}
+
+@keyframes fadeIn {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+/*메세지가 사이드에서 나오게 해보자!*/
+.main-chat {
+  margin: 0px 10px;
+  margin-top: 90px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: beige;
+}
+
+.chat__timestamp {
+  animation: fadeIn 0.8s linear;
+  font-size: 13px;
+  border-radius: 15px;
+  padding: 8px 15px;
+  text-align: center;
+}
+
+.message-row {
+  margin-top: 25px;
+  width: 100%;
+  display: flex;
+  margin-bottom: 10px;
+}
+.message-row > img {
+  width: 50px;
+  height: 50px;
+  border-radius: 40%;
+  margin-right: 10px;
+}
+
+.message__author {
+  font-size: 13px;
+  opacity: 0.7;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.message__info {
+  display: flex;
+  align-items: flex-end;
+}
+
+.message__bubble {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 12px;
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  margin-bottom: 10px;
+}
+
+.message__time {
+  font-size: 12px;
+  opacity: 0.7;
+  margin-left: 5px;
+}
+
+.meassage-row--own {
+  justify-content: flex-end;
+}
+
+.meassage-row--own .message__bubble {
+  margin-left: 5px;
+  background-color: var(--main-border);
+  color: black;
+  border-radius: 10px;
+  border-top-right-radius: 0px;
+  order: 1;
+}
+
+.reply {
+  position: fixed;
+  bottom: 0%;
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 25px;
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+.reply .reply__column:first-child {
+  width: 10%;
+}
+.reply .reply__column:last-child {
+  width: 90%;
+  position: relative;
+}
+
+.reply input {
+  text-indent: 10px;
+  padding: 5px;
+  height: 20px;
+  width: 100%;
+  border: var(--main-border);
+  border-radius: 25px;
+  transition: all 0.3s ease-in-out;
+}
+
+.reply__column:last-child > i,
+.reply__column:last-child button {
+  position: absolute;
+  right: 0px;
+  top: 4px;
+  right: -8px;
+}
+
+.reply__column:last-child > i {
+  right: 25px;
+  top: 15px;
+}
+
+.reply__column button i {
+  opacity: 1;
+}
+
+.reply__column i {
+  opacity: 0.5;
+}
+
+.reply__column button {
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 50%;
+  background-color: #fee500;
+}
+
+/*채팅입력창 아이콘들에게 transition을 준다*/
+.reply .reply__column:first-child,
+.reply .fa-face-smile,
+.reply button {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.reply:focus-within .reply__column:first-child,
+.reply:focus-within .fa-face-smile,
+.reply:focus-within button {
+  opacity: 0;
+}
+
+.reply:focus-within input {
+  width: 91vw;
+  transform: translateX(-12%) translateY(-50px);
+}
+
+.reply:focus-within {
+  transform: translateY(50px);
+}
+
+.message__bubble-box {
+  display: flex;
+  flex-direction: column;
+}
+
+@keyframes friendMessagefadeIn {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.message-row img,
+.message__author {
+  opacity: 0;
+  animation: friendMessagefadeIn 1s linear forwards;
+  animation-delay: 1s;
+}
+
+.first-message {
+  opacity: 0;
+  width: 120px;
+  animation: friendMessagefadeIn 1s linear forwards;
+  animation-delay: 1s;
+}
+
+.second-message {
+  opacity: 0;
+  animation: friendMessagefadeIn 1s linear forwards;
+  animation-delay: 2s;
+}
+
+.third-message {
+  opacity: 0;
+  animation: friendMessagefadeIn 1s linear forwards;
+  animation-delay: 4s;
+}
+
+@keyframes ownMessagefadeIn {
+  from {
+    transform: translateX(10px);
+    opacity: 0;
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.meassage-row--own .message__bubble,
+.meassage-row--own .message__time {
+  opacity: 0;
+  animation: ownMessagefadeIn 1s linear forwards;
+  animation-delay: 3s;
+}
+
+.fa-square-plus {
+  color: beige;
+}
+
+.img-message {
+  width: 150px;
+  height: 150px;
+}

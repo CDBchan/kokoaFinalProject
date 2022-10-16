@@ -1,0 +1,37 @@
+#friends-display-link {
+  /*Friends 밑에 있는 Friends Names Display부분*/
+  text-align: center;
+  display: block;
+  background-color: #fafafa;
+  padding: 15px 0px;
+  margin-top: -10px;
+  background: transparent;
+  color: beige;
+}
+
+#friends-display-link i {
+  color: var(--main-border);
+  padding: 0px 5px;
+}
+
+.friends-screen {
+  padding: 10px var(--horizontal-space);
+}
+
+.friends-screen__channel {
+  border-top: 1px solid;
+  border-color: var(--main-border);
+  margin-top: 25px;
+  padding-top: 15px;
+}
+
+.friends-screen__channel-header {
+  margin-bottom: 30px; /*이건 channel^ 와 아래 channel사이의 간격*/
+  display: flex; /*channel 과 ^를 띄우기 위해서 */
+  justify-content: space-between;
+  color: beige;
+}
+
+.friends {
+  margin-bottom: 20px;
+}

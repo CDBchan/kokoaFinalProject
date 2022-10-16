@@ -1,0 +1,81 @@
+/*nav에서는 새부배열이 불가능하다 따라서 nav_ul을통해 각아이콘을 배치해야한다*/
+.nav {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  /* box-sizing 은 padding을 넣어도 기존의 box사이즈를 늘리지 않도록 해준다.
+  만약 이게 없다면 width 가 100%상태에서 왼쪽에50px만큼의 padding이 증가한다(오른쪽50px만큼 증가하겠지). 
+  따라서 맨끝에있는 아이콘이 안보이게 되는 현상이 나온다.박스의 너비가 100% + 100px가 되니까 */
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 20px 50px;
+  border-top: 1px solid rgba(225, 225, 203, 0.7);
+  background: transparent;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav__link {
+  color: beige;
+  /*자식인 nav__notification에서 position:absolute를 사용하기위해서는
+  부모인 nav__link에서 position:relative설정을 해줘야한다.
+  position:absolute는 부모를 기준으로 움직이기 때문에*/
+  position: relative;
+}
+@keyframes notification {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: translateY(10px) rotateY(360deg);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.nav__notification {
+  /**nav__notification은 span -> inline 즉 width와 height를 가지지 못한다. 
+  따라서 display:block을 해줘야한다. **/
+  position: absolute; /*숫자와 메세지 박스가 겹쳐지게 하기위해 */
+  left: 15px; /*left 15px라고하면 왼쪽에 15px만큼의 padding을 준다라고 기억하자*/
+  bottom: 15px;
+  animation: notification 2s ease-in-out infinite;
+}
+
+.nav__dot {
+  background-color: tomato;
+  width: 6px;
+  height: 6px;
+  border-radius: 3px;
+  position: absolute;
+  bottom: 30px;
+  left: 28px;
+}
+
+@keyframes appearAnimation {
+  from {
+  }
+  to {
+    transform: none;
+    opacity: 1;
+  }
+}
+
+.nav__btn {
+  transform: translateY(50px);
+  opacity: 0;
+  animation: appearAnimation 0.3s ease-in-out forwards;
+}
+
+.nav__btn:nth-child(2) {
+  animation-delay: 0.3s;
+}
+.nav__btn:nth-child(3) {
+  animation-delay: 0.6s;
+}
+.nav__btn:last-child {
+  animation-delay: 0.9s;
+}

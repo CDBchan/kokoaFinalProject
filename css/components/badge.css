@@ -1,0 +1,14 @@
+/*이건 3번째 화면에서 보면 알수있듯이 숫자밑 1과 하단 메세지박스에있는 1이 같아서 
+이걸 component로 만들고 재사용해준다. */
+
+.badge {
+  background-color: tomato;
+  width: 30px;
+  height: 30px;
+  border-radius: 15px; /* 원을 만들고 싶다면 width와 height의 반을 radius로*/
+  display: flex; /*display: flex를 줘도 inline-> block*/
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}

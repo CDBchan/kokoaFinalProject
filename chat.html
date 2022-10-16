@@ -1,0 +1,115 @@
+<!--index 첫페이지
+    1) 단축키 !누르고 엔터-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--link:css시 자동으로 추가-->
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat with Cho Sang-Woo - SquidGame</title>
+  </head>
+  <body class="chat-screen">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>SKT</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fa-solid fa-battery-full"></i>
+      </div>
+    </div>
+
+    <header>
+      <div class="alt-screen-header main-screen">
+        <div class="alt-header__column">
+          <a href="chats.html">
+            <i class="fa-solid fa-chevron-left"></i>
+          </a>
+        </div>
+        <div class="alt-header__column">
+          <h1 class="alt-screen-header__text chat_name">Cho Sang-Woo</h1>
+        </div>
+        <div class="alt-header__column">
+          <span class="chat-magnify"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+          <span><i class="fa-solid fa-bars"></i></span>
+        </div>
+      </div>
+    </header>
+
+    <!--main은 그냥 padding사이즈를 한번에 맞춰주려고 쓴거임-->
+    <!--main-screen안에 padding이 있기때문에 그대로 쓴다-->
+    <main class="main-chat">
+      <div class="chat__timestamp">Tuesday, June 30,2020</div>
+      <div class="message-row">
+        <img
+          src="data:image/jpeg;base64,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"
+        />
+        <div class="message-row__content">
+          <span class="message__author">Cho Sang-Woo</span>
+          <div class="message__info">
+            <div class="message__bubble-box">
+              <span class="message__bubble first-message"
+                >하 **! 기훈이형!</span
+              >
+              <span class="message__bubble second-message"
+                >형 인생이 왜 그 모양 그 꼴인 줄 알아?</span
+              >
+            </div>
+            <span class="message__time second-message">20:18</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row meassage-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">응!</span>
+            <span class="message__time">21:27</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row third-message">
+        <img
+          src="data:image/jpeg;base64,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"
+        />
+        <div class="message-row__content">
+          <span class="message__author">Cho Sang-Woo</span>
+          <div class="message__info">
+            <div class="message__bubble-box">
+              <span class="message__bubble">OK good!</span>
+            </div>
+            <span class="message__time">22:18</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="reply">
+      <div class="reply__column">
+        <i class="fa-regular fa-square-plus fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" placeholder="Write a message..." />
+        <i class="fa-regular fa-face-smile fa-lg"></i>
+        <button>
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </form>
+
+    <div id="no-mobile">
+      <span>Your screen is too big</span>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/a5602e2e31.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

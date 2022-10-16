@@ -1,0 +1,45 @@
+.more-screen .icon-raw {
+  margin-top: 25px;
+  padding: 0px 15px;
+}
+
+.more-suggestions {
+  border-top: 1px solid var(--main-border);
+  margin-top: 50px;
+  padding-top: 40px;
+  color: var(--main-border);
+}
+
+.more-suggestions__title {
+  margin-bottom: 30px;
+}
+
+.more-suggestions__icons {
+  display: flex;
+}
+.more-suggestions__icon {
+  display: flex; /*kakao stroy의 이미지를 가운데로 가게 하기위해서 */
+  flex-direction: column; /*위아래 정렬을위해 이미지와 text의*/
+  align-items: center;
+  margin-left: -20px;
+}
+
+.more-suggestions__icon-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 60px;
+  background-color: var(--red);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  margin-right: 20px;
+}
+
+.more-suggestions__icon-image i {
+  font-size: 30px;
+  color: white;
+}
+.more-suggestions__icon-text {
+  width: 70%;
+}

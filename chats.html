@@ -1,0 +1,154 @@
+<!--index 첫페이지
+    1) 단축키 !누르고 엔터-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--link:css시 자동으로 추가-->
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chats - SquidGame</title>
+  </head>
+  <body>
+    <!-- 1) 02.png의 상태바에 열이 3개-->
+    <div class="status-bar">
+      <!-- class 이름을 그냥 column으로 짓기보다 status-bar__column
+        이렇게 짓는게 훨씬 보기 좋다. BEM규칙 -->
+      <div class="status-bar__column">
+        <span>SKT</span>
+        <!--아이콘 추가하는법 
+            1)아이콘 이미지를 가져옴
+            2) SVG이미지 사용 -->
+        <!--To Do: wifi Icon-->
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <!--Battery Icon-->
+        <i class="fa-solid fa-battery-full"></i>
+        <!--Lighting Icon-->
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <!-- 대부분의 nav은 ul 안에 li 안에 a로 이루어진다. 한번에 4개의 nav만드려면 nav>ul>li*4>a(단축키)-->
+    <header class="screen-header">
+      <h1 class="screen-header__title">Chats</h1>
+      <div class="screen-header__icons">
+        <span><i class="fa-solid fa-magnifying-glass fa-2x"></i></span>
+        <span><i class="fa-regular fa-comment-dots fa-2x"></i></span>
+        <span><i class="fa-sharp fa-solid fa-music fa-2x"></i></span>
+        <span><i class="fa-solid fa-gear fa-2x"></i></span>
+      </div>
+    </header>
+
+    <!--main은 그냥 padding사이즈를 한번에 맞춰주려고 쓴거임-->
+    <main class="main-screen">
+      <a href="chat.html">
+        <div class="user-component chats scale">
+          <!--이건 왼쪽 사진 + 이름-->
+          <div class="user-component__column">
+            <img
+              src="data:image/jpeg;base64,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"
+              class="user-component__avatar user-component__avatar"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title">Cho Sang-Woo</h4>
+              <h6 class="user-component__subtitle">하 **! 기훈이형!</h6>
+            </div>
+          </div>
+          <!--이건 사진+이름 옆에있는 2>등.. -->
+          <div class="user-component__column">
+            <span class="user-component__time">20:18</span>
+            <div class="badge">2</div>
+          </div>
+        </div>
+      </a>
+      <a href="chat2.html">
+        <div class="user-component chats scale">
+          <!--이건 왼쪽 사진 + 이름-->
+          <div class="user-component__column">
+            <img
+              src="data:image/jpeg;base64,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"
+              class="user-component__avatar user-component__avatar"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title">kang sae byeok</h4>
+              <h6 class="user-component__subtitle">안녕하세요</h6>
+            </div>
+          </div>
+          <!--이건 사진+이름 옆에있는 2>등.. -->
+          <div class="user-component__column">
+            <span class="user-component__time">19:35</span>
+            <div class="badge">2</div>
+          </div>
+        </div>
+      </a>
+      <a href="chat3.html">
+        <div class="user-component chats scale">
+          <!--이건 왼쪽 사진 + 이름-->
+          <div class="user-component__column">
+            <img
+              src="data:image/jpeg;base64,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"
+              class="user-component__avatar user-component__avatar"
+            />
+            <div class="user-component__text">
+              <h4 class="user-component__title">Abdul Ali</h4>
+              <h6 class="user-component__subtitle">기..훈이형</h6>
+            </div>
+          </div>
+          <!--이건 사진+이름 옆에있는 2>등.. -->
+          <div class="user-component__column">
+            <span class="user-component__time">18:30</span>
+            <div class="badge">2</div>
+          </div>
+        </div>
+      </a>
+    </main>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__btn">
+          <a class="nav__link" href="friends.html">
+            <i class="fa-regular fa-user fa-2x"></i>
+          </a>
+        </li>
+
+        <li class="nav__btn">
+          <a class="nav__link" href="chats.html">
+            <span class="nav__notification badge">6</span>
+            <i class="fa-regular fa-comment fa-2x"></i>
+          </a>
+        </li>
+
+        <li class="nav__btn">
+          <a class="nav__link" href="find.html"
+            ><i class="fa-solid fa-magnifying-glass fa-2x"></i>
+          </a>
+        </li>
+
+        <li class="nav__btn">
+          <a class="nav__link" href="more.html">
+            <span class="nav__dot"></span>
+            <i class="fa-solid fa-ellipsis fa-2x"></i>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <div id="no-mobile">
+      <img
+        src="https://photo.coolenjoy.co.kr/data/editor/2111/45a3515baf1566ae83cf16567b3f1476e551954f.jpg"
+      />
+      <div id="text">The Screen is too big</div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/a5602e2e31.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

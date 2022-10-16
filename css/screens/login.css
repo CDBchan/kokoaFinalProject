@@ -1,0 +1,65 @@
+.welcome-header {
+  /*display:flex를 사용할수도있지만 header에는 text가 있어서 text-align을 사용*/
+  margin: 90px 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 600;
+  color: beige;
+}
+
+.welcome-header__title {
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+
+.welcome-header__text {
+  width: 50%;
+  opacity: 80%;
+}
+
+#login-form {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 30px; /*padding도 가능 사이드 공백을 준거임 */
+}
+
+#login-form input {
+  border-radius: 20px;
+  text-indent: 13px;
+  padding: 10px 0px;
+  border: none; /*input의 border을 없애기위해*/
+  font-size: 15px;
+  border-bottom: 1px solid rgba(121, 24, 24, 0.2);
+  margin-bottom: 25px;
+  transition: border-color 0.3s ease-in-out; /*색이 천천히 바뀌게 하기위해서 transition사용 */
+}
+
+#login-form input:not([type="submit"]) {
+  /*submit타입일떄는 border-bottom이 --yellow가 되지 않도록*/
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+#login-form input::placeholder {
+  color: rgb(0, 0, 0, 0.4); /*placeholder의 색변경 더 연하게 */
+  font-size: 15px;
+}
+
+#login-form input:focus {
+  border-color: rgba(219, 7, 7, 0.5); /*root에 --yellow를 적용해놓음*/
+}
+
+#login-form input[type="submit"] {
+  background-color: rgba(219, 7, 7, 0.8); /*submit의 색을 지정해주기위해 */
+  cursor: pointer; /*submit위에 올리면 마우스 커서가 포인터로 바뀐다*/
+  padding: 15px 0px;
+  border-radius: 5px;
+}
+
+#login-form a {
+  text-align: center;
+  text-decoration: none;
+  color: inherit;
+  font-size: 13px;
+}

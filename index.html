@@ -1,0 +1,75 @@
+<!--index 첫페이지
+    1) 단축키 !누르고 엔터-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--link:css시 자동으로 추가-->
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome to Squid game</title>
+  </head>
+  <body>
+    <!-- 1) 02.png의 상태바에 열이 3개-->
+    <div class="status-bar">
+      <!-- class 이름을 그냥 column으로 짓기보다 status-bar__column
+        이렇게 짓는게 훨씬 보기 좋다. BEM규칙 -->
+      <div class="status-bar__column">
+        <span>SKT</span>
+        <!--아이콘 추가하는법 
+            1)아이콘 이미지를 가져옴
+            2) SVG이미지 사용 -->
+        <!--To Do: wifi Icon-->
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <!--Battery Icon-->
+        <i class="fa-solid fa-battery-full"></i>
+        <!--Lighting Icon-->
+        <i class="fa-solid fa-bolt"></i>
+      </div>
+    </div>
+
+    <header class="welcome-header">
+      <h1 class="welcome-header__title">Welcome to Squid Game</h1>
+      <!-- <span>, <p>, <div>중 내가 굳이 <p>를 사용한이유
+        문자 정보를 줄바꿈을 하면서 작성할떄는 <div> or <p>
+        이때 단순 문자정보를 입력하는 단락구성시 <p>를 사용-->
+      <p class="welcome-header__text">
+        If you want to join our game,log in with your name and Social Security
+        Number
+      </p>
+    </header>
+    <!--form의 method에서 get은 url에 담겨도 상관없는정보 즉 보안에 취약 post는 백엔드 시스템을
+    구축해야 사용가능  
+    form 2가지 중요한것 action(어떤 페이지로 보낼것인가), method(get or post)
+    <form action="friends.html" method="get" id="login-form">-->
+    <form action="friends.html" method="get" id="login-form">
+      <!--form은 큰 입력틀을 만들때 사용 -->
+      <input input name="username" type="text" placeholder="Your Name" />
+      <input
+        input
+        name="password"
+        type="password"
+        placeholder="Social Security Number"
+      />
+      <input type="submit" value="Log In" />
+    </form>
+
+    <div id="no-mobile">
+      <img
+        src="https://photo.coolenjoy.co.kr/data/editor/2111/45a3515baf1566ae83cf16567b3f1476e551954f.jpg"
+      />
+      <div id="text">The Screen is too big</div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/a5602e2e31.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

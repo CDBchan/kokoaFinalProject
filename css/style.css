@@ -1,0 +1,45 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Yellowtail&display=swap");
+/*사이즈를 설정하기전에 reset하는게 중요하다 
+기본 margin 8px등등을 초기화한다.*/
+
+@import "reset.css";
+@import "variable.css";
+
+/*components first*/
+@import "components/status_bar.css";
+@import "components/nav_bar.css";
+@import "components/screenheader.css";
+@import "components/user-components.css";
+@import "components/badge.css";
+@import "components/icon-raw.css";
+@import "components/alt-screen-header.css";
+@import "components/no-mobile.css";
+@import "components/background.css";
+@import "components/bigger-scale.css";
+
+/*screens*/
+@import "screens/login.css";
+@import "screens/friends.css";
+@import "screens/find.css";
+@import "screens/more.css";
+@import "screens/settings.css";
+@import "screens/chat.css";
+
+html {
+  background: url("https://w0.peakpx.com/wallpaper/20/711/HD-wallpaper-squid-game-drama-kdrama-korea-korean-drama-thumbnail.jpg")
+    no-repeat center center fixed;
+  background-size: cover;
+  background-color: rgba(255, 0, 0, 0.3);
+}
+
+body {
+  /*Google font에 들어가서 폰트를 찾을수있다.*/
+  font-family: "Open Sans", sans-serif;
+  background-image: url("");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.main-screen {
+  padding: 0px var(--horizontal-space);
+}

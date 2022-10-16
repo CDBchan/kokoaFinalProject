@@ -1,0 +1,113 @@
+<!--index 첫페이지
+    1) 단축키 !누르고 엔터-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--link:css시 자동으로 추가-->
+    <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat with kang sae byeok - SquidGame</title>
+  </head>
+  <body class="chat-screen">
+    <div class="status-bar">
+      <div class="status-bar__column">
+        <span>SKT</span>
+        <i class="fa-solid fa-wifi"></i>
+      </div>
+      <div class="status-bar__column">
+        <span>18:43</span>
+      </div>
+      <div class="status-bar__column">
+        <span>100%</span>
+        <i class="fa-solid fa-battery-full"></i>
+      </div>
+    </div>
+
+    <header>
+      <div class="alt-screen-header main-screen">
+        <div class="alt-header__column">
+          <a href="chats.html">
+            <i class="fa-solid fa-chevron-left"></i>
+          </a>
+        </div>
+        <div class="alt-header__column">
+          <h1 class="alt-screen-header__text chat_name">kang sae byeok</h1>
+        </div>
+        <div class="alt-header__column">
+          <span class="chat-magnify"
+            ><i class="fa-solid fa-magnifying-glass"></i
+          ></span>
+          <span><i class="fa-solid fa-bars"></i></span>
+        </div>
+      </div>
+    </header>
+
+    <!--main은 그냥 padding사이즈를 한번에 맞춰주려고 쓴거임-->
+    <!--main-screen안에 padding이 있기때문에 그대로 쓴다-->
+    <main class="main-chat">
+      <div class="chat__timestamp">Tuesday, June 30,2020</div>
+      <div class="message-row">
+        <img
+          src="data:image/jpeg;base64,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"
+        />
+        <div class="message-row__content">
+          <span class="message__author">kang sae byeok</span>
+          <div class="message__info">
+            <div class="message__bubble-box">
+              <span class="message__bubble first-message">안녕하세요</span>
+              <span class="message__bubble second-message"
+                >제이름은 강새벽입니다</span
+              >
+            </div>
+            <span class="message__time second-message">19:35</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row meassage-row--own">
+        <div class="message-row__content">
+          <div class="message__info">
+            <span class="message__bubble">제이름은 성기훈입니다.</span>
+            <span class="message__time">21:27</span>
+          </div>
+        </div>
+      </div>
+      <div class="message-row third-message">
+        <img
+          src="data:image/jpeg;base64,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"
+        />
+        <div class="message-row__content">
+          <span class="message__author">kang sae byeok</span>
+          <div class="message__info">
+            <div class="message__bubble-box">
+              <span class="message__bubble">이름참 멋지네요</span>
+            </div>
+            <span class="message__time">22:18</span>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <form class="reply">
+      <div class="reply__column">
+        <i class="fa-regular fa-square-plus fa-lg"></i>
+      </div>
+      <div class="reply__column">
+        <input type="text" placeholder="Write a message..." />
+        <i class="fa-regular fa-face-smile fa-lg"></i>
+        <button>
+          <i class="fa-solid fa-arrow-up"></i>
+        </button>
+      </div>
+    </form>
+
+    <div id="no-mobile">
+      <span>Your screen is too big</span>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/a5602e2e31.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
